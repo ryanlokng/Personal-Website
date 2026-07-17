@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ryan Ng — Engineering Student, HKU</title>
+    <script>
+      // GitHub Pages has no server-side routing, so a direct/refreshed visit to
+      // a client-side route (e.g. /blog/some-slug) hits this 404 page. Encode the
+      // path into a query string and redirect to index.html, which decodes it
+      // back before React Router mounts (see the script in index.html).
+      var path = location.pathname + location.search + location.hash;
+      location.replace('/?redirect=' + encodeURIComponent(path));
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { blogPosts } from '../data';
 
 export default function Blog() {
@@ -11,13 +12,12 @@ export default function Blog() {
           </div>
         </div>
         <div className="blog-grid">
-          {blogPosts.map(({ title, excerpt, tag }) => (
-            <a href="#" className="blog-card" key={title}>
-              <p className="blog-status">Coming soon</p>
+          {blogPosts.map(({ slug, title, excerpt, tag }) => (
+            <Link to={`/blog/${slug}`} className="blog-card" key={slug}>
               <h3 className="blog-title">{title}</h3>
               <p className="blog-excerpt">{excerpt}</p>
               <span className="blog-pill">{tag}</span>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

@@ -275,7 +275,7 @@ h2 {
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
@@ -292,13 +292,6 @@ h2 {
   border-color: var(--blue);
   transform: translateY(-3px);
   box-shadow: 0 10px 32px rgba(166,199,232,0.25);
-}
-
-.blog-status {
-  font-size: 10px; font-weight: 700;
-  letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 14px;
 }
 
 .blog-title {
@@ -328,6 +321,53 @@ h2 {
   background: var(--blue-dim);
 }
 
+/* ── BLOG POST ───────────────────────────────────────── */
+#blog-post {
+  background: var(--bg);
+  padding: 160px 0 120px;
+  min-height: 100svh;
+}
+
+.blog-post {
+  max-width: 720px;
+}
+
+.blog-back {
+  display: block;
+  font-size: 13px; font-weight: 600;
+  color: var(--blue-text);
+  text-decoration: none;
+  margin-bottom: 28px;
+}
+.blog-back:hover { text-decoration: underline; }
+
+.blog-post .blog-pill { margin-bottom: 18px; }
+
+.blog-post-title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--navy);
+  margin-bottom: 32px;
+}
+
+.blog-post-body p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* ── PROJECT DETAIL ──────────────────────────────────── */
+#project-detail {
+  background: var(--bg);
+  padding: 160px 0 120px;
+  min-height: 100svh;
+}
+
+.project-detail-tech { margin-bottom: 32px; }
+
 /* ── PROJECTS ────────────────────────────────────────── */
 #projects {
   background: #f5f9fc;
@@ -350,6 +390,7 @@ h2 {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 32px;
+  text-decoration: none; color: inherit;
   transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   display: flex; flex-direction: column;
 }
@@ -471,6 +512,8 @@ footer {
   .container { padding: 0 20px; }
   #home { padding: 64px 0; }
   #about, #blog, #projects, #contact { padding: 80px 0; }
+  #blog-post { padding: 100px 0 80px; }
+  #project-detail { padding: 100px 0 80px; }
   .hero-name { letter-spacing: -0.03em; }
   .blog-grid { grid-template-columns: 1fr; }
   .about-grid { gap: 40px; }

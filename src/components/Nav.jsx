@@ -9,7 +9,7 @@ export default function Nav({ menuOpen, onToggle }) {
       >
         <span /><span /><span />
       </button>
-      <a href="#home" className="nav-logo" aria-label="Ryan Ng — home">RN</a>
+      <a href="/#home" className="nav-logo" aria-label="Ryan Ng — home">RN</a>
     </header>
   );
 }
