@@ -23,8 +23,10 @@ export default function BlogPost() {
         <span className="blog-pill">{post.tag}</span>
         <h1 className="blog-post-title">{post.title}</h1>
         <div className="blog-post-body">
-          {post.content.map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
+          {post.content.map((block, i) => (
+            block.type === 'image'
+              ? <img key={i} src={block.src} alt={block.alt} className="blog-post-image" />
+              : <p key={i}>{block.text}</p>
           ))}
         </div>
       </div>
