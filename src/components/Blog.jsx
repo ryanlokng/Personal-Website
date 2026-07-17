@@ -12,11 +12,14 @@ export default function Blog() {
           </div>
         </div>
         <div className="blog-grid">
-          {blogPosts.map(({ slug, title, excerpt, tag }) => (
+          {blogPosts.map(({ slug, title, excerpt, tag, date }) => (
             <Link to={`/blog/${slug}`} className="blog-card" key={slug}>
               <h3 className="blog-title">{title}</h3>
               <p className="blog-excerpt">{excerpt}</p>
-              <span className="blog-pill">{tag}</span>
+              <div className="blog-meta">
+                <span className="blog-pill">{tag}</span>
+                <span className="blog-date">{date}</span>
+              </div>
             </Link>
           ))}
         </div>

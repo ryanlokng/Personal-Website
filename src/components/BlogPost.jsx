@@ -20,7 +20,10 @@ export default function BlogPost() {
     <section id="blog-post" aria-label={post.title}>
       <div className="container blog-post">
         <Link to="/#blog" className="blog-back">&larr; Back to blog</Link>
-        <span className="blog-pill">{post.tag}</span>
+        <div className="blog-meta">
+          <span className="blog-pill">{post.tag}</span>
+          <span className="blog-date">{post.date}</span>
+        </div>
         <h1 className="blog-post-title">{post.title}</h1>
         <div className="blog-post-body">
           {post.content.map((block, i) => (

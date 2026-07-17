@@ -321,6 +321,19 @@ h2 {
   background: var(--blue-dim);
 }
 
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.blog-date {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
 /* ── BLOG POST ───────────────────────────────────────── */
 #blog-post {
   background: var(--bg);
@@ -341,7 +354,7 @@ h2 {
 }
 .blog-back:hover { text-decoration: underline; }
 
-.blog-post .blog-pill { margin-bottom: 18px; }
+.blog-post .blog-meta { margin-bottom: 18px; }
 
 .blog-post-title {
   font-size: clamp(28px, 4vw, 44px);
