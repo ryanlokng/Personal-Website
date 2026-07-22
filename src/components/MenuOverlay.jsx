@@ -1,6 +1,8 @@
-import { navItems } from '../data';
+import { navItems, projects } from '../data';
 
 export default function MenuOverlay({ open, onClose }) {
+  const items = navItems.filter(({ href }) => href !== '/#projects' || projects.length > 0);
+
   return (
     <div
       className={`menu-overlay${open ? ' open' : ''}`}
@@ -10,7 +12,7 @@ export default function MenuOverlay({ open, onClose }) {
     >
       <nav>
         <ul className="menu-nav">
-          {navItems.map(({ label, href }) => (
+          {items.map(({ label, href }) => (
             <li key={href}>
               <a href={href} className="menu-link" onClick={onClose}>{label}</a>
             </li>
