@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { projects } from '../data';
 
 export default function Projects() {
+  if (projects.length === 0) return null;
+
   const singleColumn = projects.length === 1;
 
   return (
