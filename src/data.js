@@ -54,7 +54,7 @@ export const projects = [
     title: 'SpeakFlow — AI Interview Prep',
     detailTitle: 'The Interview Panic Button: Building SpeakFlow AI in a 3-Hour Toronto Tech Week Hackathon',
     subtitle: 'How I turned "I have an interview tomorrow and I\'m not ready" into a working voice-AI coach — from a blank Cursor window to a live demo in 180 minutes.',
-    desc: 'Building an AI-powered interview practice tool with voice interaction, countdown timers, and real-time feedback across banking, consulting, and software engineering verticals.',
+    desc: 'How I turned "I have an interview tomorrow and I\'m not ready" into a working voice-AI coach — from a blank Cursor window to a live demo in 180 minutes.',
     tech: ['AI / LLM', 'Voice UX', 'Web Dev'],
     content: [
       { type: 'heading', text: 'The idea: a panic button for interviews' },
