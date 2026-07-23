@@ -81,7 +81,8 @@ export const blogPosts = [
 export const projects = [
   {
     slug: 'speakflow-ai-interview-prep',
-    org: 'Personal · Ongoing',
+    org: 'Personal · May 2026',
+    link: 'https://speakflow-flax.vercel.app',
     title: 'SpeakFlow — AI Interview Prep',
     detailTitle: 'The Interview Panic Button: Building SpeakFlow AI in a 3-Hour Toronto Tech Week Hackathon',
     subtitle: 'How I turned "I have an interview tomorrow and I\'m not ready" into a working voice-AI coach — from a blank Cursor window to a live demo in 180 minutes.',
