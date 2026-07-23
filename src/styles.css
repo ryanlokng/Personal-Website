@@ -446,14 +446,7 @@ h2 {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 32px;
-  text-decoration: none; color: inherit;
-  transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   display: flex; flex-direction: column;
-}
-.project-card:hover {
-  border-color: var(--blue);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(166,199,232,0.28);
 }
 
 .project-org {
